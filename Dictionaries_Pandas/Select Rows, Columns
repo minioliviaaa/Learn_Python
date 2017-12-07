@@ -1,0 +1,68 @@
+The single bracket version gives a Pandas Series, the double bracket version gives a Pandas DataFrame.
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out country column as Pandas Series
+print(cars["country"])
+
+# Print out country column as Pandas DataFrame
+print(cars[["country"]])
+
+# Print out DataFrame with country and drives_right columns
+print(cars[["country","drives_right"]])
+-------------------------------------------------------------------------------------------------------------------------------------------
+In [1]: # Import cars data
+        import pandas as pd
+        cars = pd.read_csv('cars.csv', index_col = 0)
+        
+        # Print out country column as Pandas Series
+        print(cars["country"])
+        
+        # Print out country column as Pandas DataFrame
+        print(cars[["country"]])
+        
+        # Print out DataFrame with country and drives_right columns
+        print(cars[["country","drives_right"]])
+US     United States
+AUS        Australia
+JAP            Japan
+IN             India
+RU            Russia
+MOR          Morocco
+EG             Egypt
+Name: country, dtype: object
+           country
+US   United States
+AUS      Australia
+JAP          Japan
+IN           India
+RU          Russia
+MOR        Morocco
+EG           Egypt
+           country drives_right
+US   United States         True
+AUS      Australia        False
+JAP          Japan        False
+IN           India        False
+RU          Russia         True
+MOR        Morocco         True
+EG           Egypt         True
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Square brackets can do more than just selecting columns. 
+You can also use them to get rows, or observations, from a DataFrame. 
+The following call selects the first five rows from the cars DataFrame:
+
+cars[0:5]
+
+# Import cars data
+import pandas as pd
+cars = pd.read_csv('cars.csv', index_col = 0)
+
+# Print out first 3 observations
+print(cars[0:3])
+
+# Print out fourth, fifth and sixth observation
+print(cars[3:6])
