@@ -61,6 +61,50 @@ cars=pd.read_csv('cars.csv')
 # Print out cars
 print(cars)
 
+In [1]: # Import pandas as pd
+        import pandas as pd 
+        
+        # Import the cars.csv data: cars
+        cars=pd.read_csv('cars.csv')
+        
+        # Print out cars
+        print(cars)
+  Unnamed: 0  cars_per_cap        country drives_right
+0         US           809  United States         True
+1        AUS           731      Australia        False
+2        JAP           588          Japan        False
+3         IN            18          India        False
+4         RU           200         Russia         True
+5        MOR            70        Morocco         True
+6         EG            45          Egypt         True
+
+# Import pandas as pd
+import pandas as pd
+
+# Fix import by including index_col
+cars = pd.read_csv('cars.csv',index_col=0)
+
+# Print out cars
+print(cars)
+
+In [1]: # Import pandas as pd
+        import pandas as pd
+        
+        # Fix import by including index_col
+        cars = pd.read_csv('cars.csv',index_col=0)
+        
+        # Print out cars
+        print(cars)
+     cars_per_cap        country drives_right
+US            809  United States         True
+AUS           731      Australia        False
+JAP           588          Japan        False
+IN             18          India        False
+RU            200         Russia         True
+MOR            70        Morocco         True
+EG             45          Egypt         True
+
+
 
 
 
