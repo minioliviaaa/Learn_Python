@@ -1,0 +1,82 @@
+The while loop is like a repeated if statement. 
+The code is executed over and over again, as long as the condition is True. Have another look at its recipe.
+
+while condition :
+    expression
+-------------------------------------------------------------------------------------------------------------------------------------------    
+Example_1:
+x = 1
+while x < 4 :
+    print(x)
+    x = x + 1
+    
+1
+2
+3
+
+-------------------------------------------------------------------------------------------------------------------------------------------
+Example_2:
+
+Create the variable offset with an initial value of 8.
+Code a while loop that keeps running as long as offset is not equal to 0. Inside the while loop:
+Print out the sentence "correcting...".
+Next, decrease the value of offset by 1. You can do this with offset = offset - 1.
+Finally, print out offset so you can see how it changes.
+
+# Initialize offset
+offset=8
+
+# Code the while loop
+while offset!=0:
+    print("correcting...")
+    offset=offset-1
+    print(offset)
+    
+    <script.py> output:
+    correcting...
+    7
+    correcting...
+    6
+    correcting...
+    5
+    correcting...
+    4
+    correcting...
+    3
+    correcting...
+    2
+    correcting...
+    1
+    correcting...
+    0
+    
+Inside the while loop, replace offset = offset - 1 by an if-else statement:
+If offset > 0, you should decrease offset by 1.
+Else, you should increase offset by 1.
+
+# Initialize offset
+offset = -6
+
+# Code the while loop
+while offset != 0 :
+    print("correcting...")
+    if offset > 0:
+        offset = offset - 1
+    else:
+        offset = offset + 1
+    print(offset)
+    
+    <script.py> output:
+    correcting...
+    -5
+    correcting...
+    -4
+    correcting...
+    -3
+    correcting...
+    -2
+    correcting...
+    -1
+    correcting...
+    0
+    
