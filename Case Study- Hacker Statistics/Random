@@ -1,0 +1,85 @@
+Random float
+
+Randomness has many uses in science, art, statistics, cryptography, gaming, gambling, and other fields. 
+You're going to use randomness to simulate a game.
+
+All the functionality you need is contained in the random package, a sub-package of numpy. 
+In this exercise, you'll be using two functions from this package:
+
+seed(): sets the random seed, so that your results are the reproducible between simulations. 
+As an argument, it takes an integer of your choosing. If you call the function, no output will be generated.
+rand(): if you don't specify any arguments, it generates a random float between zero and one.
+
+Example_1:
+
+Import numpy as np.
+Use seed() to set the seed; as an argument, pass 123.
+Generate your first random float with rand() and print it out.
+
+# Import numpy as np
+import numpy as np
+
+# Set the seed
+np.random.seed(123)
+
+# Generate and print random float
+print(np.random.rand())
+
+<script.py> output:
+    0.6964691855978616
+    
+    
+Example_2:
+
+Use randint() with the appropriate arguments to randomly generate the integer 1, 2, 3, 4, 5 or 6. This simulates a dice. Print it out.
+Repeat the outcome to see if the second throw is different. Again, print out the result.
+
+# Import numpy and set seed
+import numpy as np
+np.random.seed(123)
+
+# Use randint() to simulate a dice
+print(np.random.randint(1,7))
+
+# Use randint() again
+print(np.random.randint(1,7))
+
+<script.py> output:
+    6
+    3
+    
+Example_3:
+
+Roll the dice. Use randint() to create the variable dice.
+Finish the if-elif-else construct by replacing ___:
+If dice is 1 or 2, you go one step down.
+if dice is 3, 4 or 5, you go one step up.
+Else, you throw the dice again. The number of eyes is the number of steps you go up.
+Print out dice and step. Given the value of dice, was step updated correctly?
+
+# Import numpy and set seed
+import numpy as np
+np.random.seed(123)
+
+# Starting step
+step = 50
+
+# Roll the dice
+dice = np.random.randint(1,7)
+
+# Finish the control construct
+if dice <= 2 :
+    step = step - 1
+elif dice <= 5 :
+    step = step + 1
+else:
+    step = step + np.random.randint(1,7)
+    
+# Print out dice and step    
+print(dice)
+print(step)
+
+<script.py> output:
+    6
+    53
+    
